@@ -60,3 +60,6 @@ https://www.kaggle.com/wiki/HammingLoss <br>
 <p> there are total 42048 tags are present </p>
 <p> Distribution of Number of times each tag appered </p>
 <img src = "images\dist_tags.png">
+<p> top most 500 tags and their distribution </p>
+<img src = "images\dist_tags_500.png">
+
