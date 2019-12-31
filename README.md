@@ -58,3 +58,4 @@ https://www.kaggle.com/wiki/HammingLoss <br>
 <h3> 3.1 Analysis of Tags </h3>
 <h3> 3.1.2 Total Number of Unique Tags </h3>
 <p> there are total 42048 tags are present </p>
+<p> Distribution of Tags </p>
