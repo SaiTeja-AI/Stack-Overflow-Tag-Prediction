@@ -62,4 +62,8 @@ https://www.kaggle.com/wiki/HammingLoss <br>
 <img src = "images\dist_tags.png">
 <p> top most 500 tags and their distribution </p>
 <img src = "images\dist_tags_500.png">
-
+<h3> Observations </h3>
+<ol type = "1">
+  <li> There are total 153 tags which are used more than 10000 times. </li>
+  <li> 14 tags are used more than 100000 times.</li>
+  <li> Most frequent tag (i.e. c#) is used 331505 times.</li>
