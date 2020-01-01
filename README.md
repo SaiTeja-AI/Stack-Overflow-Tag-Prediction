@@ -135,5 +135,8 @@ https://www.kaggle.com/wiki/HammingLoss <br>
     <td> 0.18 </td>
     <td> 0.29 </td>
   </tr>
+</table>
+<h3> Credits </h3>
+<a href="www.appliedaicourse.com">Applied Ai</a>
   
   
