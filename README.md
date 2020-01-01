@@ -67,3 +67,73 @@ https://www.kaggle.com/wiki/HammingLoss <br>
   <li> There are total 153 tags which are used more than 10000 times. </li>
   <li> 14 tags are used more than 100000 times.</li>
   <li> Most frequent tag (i.e. c#) is used 331505 times.</li>
+</ol>
+<h3> 3.1.3 Distribution of number of tags in question </h3>
+<img src = "images\dist_tags_3.png">
+<h3> obseravtions </h3>
+<ol type = "1">
+  <li> Maximum number of tags per question: 5. </li>
+  <li> Minimum number of tags per question: 1.</li>
+  <li> Avg. number of tags per question: 2.899.</li>
+</ol>
+<h3> Freequency of top 20 Tags </h3>
+<img src = "images\dist_tags_4.png">
+<h3> 4. Preprocessing of questions </h3>
+<ol> 
+    <li> Separate Code from Body </li>
+    <li> Remove Spcial characters from Question title and description (not in code)</li>
+    <li> Give more weightage to title : Add title three times to the question  </li>
+    <li> Remove stop words (Except 'C') </li>
+    <li> Remove HTML Tags </li>
+    <li> Convert all the characters into small letters </li>
+    <li> Use SnowballStemmer to stem the words </li>
+</ol>
+<p> here we are using only top 500 tags because we pose it as multi label problem and to solve this we have to run 500 models separetly
+  so it is very time consuming if we take all 40000 tags then we have to 40000 models so it is computationally expensive task.</p>
+<p> below is the coverage of number of questions if we take top most 500 questions </p>
+<img src = "images\dist_tags_5.png">
+<h3> Models </h3>
+<ol>
+  <li> i used bag of words representation upto 4 grams for text data and applied logistic regression one vs rest model. </li>
+  <li> did hyperparameter tuning also to find best C </li>
+  <li> finally applied Linear SVC One vs Rest </li>
+</ol>
+<p> below table descibes the results </p>
+<table>
+  <tr>
+    <th> Model </th>
+    <th> C value </th>
+    <th> precision </th>
+    <th> recall   </th>
+    <th> f1-score </th>
+  </tr>
+  <tr>
+    <td> Logistic Regression </td>
+    <td> 0.01 </td>
+    <td> 0.7 </td>
+    <td> 0.24 </td>
+    <td> 0.36 </td>
+  </tr>
+  <tr>
+    <td> Logistic Regression </td>
+    <td> 100 </td>
+    <td> 0.57 </td>
+    <td> 0.34 </td>
+    <td> 0.43 </td>
+  </tr>
+  <tr>
+    <td> SGD with hinge loss </td>
+    <td> 0.001 </td>
+    <td> 0.72 </td>
+    <td> 0.3 </td>
+    <td> 0.42 </td>
+  </tr>
+  <tr>
+    <td> SGD with hinge loss </td>
+    <td> 0.01 </td>
+    <td> 0.78 </td>
+    <td> 0.18 </td>
+    <td> 0.29 </td>
+  </tr>
+  
+  
